@@ -1,5 +1,5 @@
 # Created by https://www.gitignore.io/api/django
-
+# Documentação Django https://docs.djangoproject.com/en/2.0/ref/models/fields/
 ### Django ###
 *.log
 *.pot
