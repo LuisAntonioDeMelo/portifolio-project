@@ -20,7 +20,7 @@
 
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="/">Luis Antônio</a>
+            <a class="navbar-brand" href="#">Luis Antônio</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -33,7 +33,7 @@
                   <a class="nav-link" href="#">Resume</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/blog">Blog</a>
+                  <a class="nav-link active" href="#">Blog</a>
                 </li>
               </ul>
             </div>
@@ -42,27 +42,34 @@
 
     <main role="main">
 
-      <section class="jumbotron text-center">
+      <section class="jumbotron ">
         <div class="container">
-          <h1 class="jumbotron-heading">Hi' I'm a Luis</h1>
-          <p class="lead text-muted">Olá eu sou luis, trabalho com desenvolvimento web, esse site foi desenvolvido com Python 3 e Django Framework.</p>
+          <h1 class="jumbotron-heading text-center">DevBlog Lui/></h1>
           <p>
-            <a href="mailto:tyluis20@gmail.com" class="btn btn-primary my-2">E-mail me</a>
-   
           </p>
+          <br>
+          <br>
+         
         </div>
       </section>
 
       <div class="album py-5 bg-light">
         <div class="container">
-
+                <h4>Ultimos Post</h4>
+                <hr/>
+      
           <div class="row">
-              {%for job in jobs.all%}
+              {%for blog in blogs.all %}
             <div class="col-md-4">
               <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src="{{job.image.url}}"/>
+               <div class="card-header">
+                 <a href=""><h3>{{blog.title}}<br></h3></a>
+                    <small>Por : {{blog.subtitle}}</small>
+               </div>
+                <img class="card-img-top" src="{{blog.imagem.url}}"/>
                 <div class="card-body">
-                  <p class="card-text">{{job.sumary}}</p>
+                 <p class="card-text">{{blog.summary}}</p>
+                 <p><small>{{blog.data_ano}}</small></p>
                 </div>
               </div>
             </div>
