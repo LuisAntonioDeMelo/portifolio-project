@@ -6,7 +6,7 @@ class Blog(models.Model):
     subtitle = models.CharField(max_length=60)
     data_publicado = models.DateTimeField()
     imagem = models.ImageField(upload_to='imagens/')
-    body= models.TextField(max_length=200)
+    body= models.TextField()
 
     def summary(self):
         return self.body[:88]
@@ -14,3 +14,4 @@ class Blog(models.Model):
     def data_ano(self):
         return self.data_publicado.strftime('%b %e %Y')
  
+    
