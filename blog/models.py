@@ -4,5 +4,6 @@ from django.db import models
 class Blog(models.Model):
     title = models.CharField(max_length=50)
     subtitle = models.CharField(max_length=60)
+    data_publicado = models.DateTimeField()
     imagem = models.ImageField(upload_to='imagens/')
-    description = models.CharField(max_length=200)
+    body= models.TextField(max_length=200)
